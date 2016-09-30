@@ -83,7 +83,7 @@
     </repository>
   </repositories>
   <build>
-    <finalName>spring-security-saml2-sample</finalName>
+    <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -98,7 +98,11 @@
         <artifactId>tomcat7-maven-plugin</artifactId>
         <version>2.2</version>
         <configuration>
-          <path>/spring-security-saml2-sample</path>
+          <path>/${project.build.finalName}</path>
+          <httpPort>8181</httpPort>
+          <httpsPort>8443</httpsPort>
+          <keystoreFile>${basedir}/src/main/resources/security/samlKeystore.jks</keystoreFile>
+          <keystorePass>nalle123</keystorePass>
         </configuration>
       </plugin>
     </plugins>
