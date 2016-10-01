@@ -39,7 +39,7 @@ See SP metadata configuration for the SP EntityID, referred to below as: `<confi
 
 #### TESTSHIB
 
-    TODO: fill in details
+    https://idp.testshib.org/idp/profile/SAML2/Unsolicited/SSO?providerId=urn:troyhart:nwri
 
 ## Guides
 
