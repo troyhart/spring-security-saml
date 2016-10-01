@@ -147,12 +147,21 @@
             </constructor-arg>
             <property name="parserPool" ref="parserPool"/>
           </bean>
+          <bean class="org.opensaml.saml2.metadata.provider.HTTPMetadataProvider">
+            <constructor-arg>
+              <value type="java.lang.String">https://www.testshib.org/metadata/testshib-providers.xml</value>
+            </constructor-arg>
+            <constructor-arg>
+              <value type="int">5000</value>
+            </constructor-arg>
+            <property name="parserPool" ref="parserPool"/>
+          </bean>
         </list>
       </constructor-arg>
       <!-- OPTIONAL used when one of the metadata files contains information about this service provider -->
       <!-- <property name="hostedSPName" value=""/> -->
       <!-- OPTIONAL property: can tell the system which IDP should be used for authenticating user by default. -->
-      <!-- <property name="defaultIDP" value="http://localhost:8080/opensso"/> -->
+      <property name="defaultIDP" value="https://idp.ssocircle.com"/>
     </bean>
 
     <!-- SAML Authentication Provider responsible for validating of received SAML messages -->
