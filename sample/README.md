@@ -1,7 +1,17 @@
 # Spring Security SAML Sample Application
 
-This is a sample SAML2 service provider application. The SP metadata (by default: [sp.xml](src/main/resources/metadata/sp.xml); 
-default Entity ID: `urn:troyhart:nwri`) is configured in the `metadata` bean (see: [securityContext.xml](src/main/webapp/WEB-INF/securityContext.xml)).
+This is a sample SAML2 service provider application. The [security context configuration](src/main/webapp/WEB-INF/securityContext.xml)
+specifies a bean named `metadata` which configures the metadata for one service provider and two
+identity providers. 
+
+## Service Provider (SP) Metadata
+
+* [urn:troyhart:nwri](src/main/resources/metadata/sp.xml)
+
+## Identity Provider (IDP) Metadata
+
+* [https://idp.ssocircle.com](src/main/resources/metadata/ssocircle-idp.xml)
+* [https://idp.testshib.org/idp/shibboleth](src/main/resources/metadata/testshib-idp.xml)
 
 ## Build
 
@@ -29,9 +39,12 @@ You need to have an account on SSO Circle and/or TESTSHIB to be able to test.
 If IDP Discovery is enabled, you will be redirected to a page where you are presented with a list of 
 identity providers. Select the identity provider and press the `login` button.
 
+Also, you can trigger login and identify the IDP with the following URL: `http://localhost:8181/spring-security-saml2-sample/saml/login?idp=<IDP EntityID>`
+
 ### IDP Initiated
 
-See SP metadata configuration for the SP EntityID, referred to below as: `<configurred SP EntityID>`.
+See [SP metadata configuration](src/main/resources/metadata/sp.xml) for the SP EntityID. By default, the value will be: `urn:troyhart:nwri`
+
 
 #### SSO Circle
 
@@ -39,7 +52,7 @@ See SP metadata configuration for the SP EntityID, referred to below as: `<confi
 
 #### TESTSHIB
 
-    TODO: fill in details
+    https://idp.testshib.org/idp/profile/SAML2/Unsolicited/SSO?providerId=<configurred SP EntityID>
 
 ## Guides
 
