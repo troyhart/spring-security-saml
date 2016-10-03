@@ -48,11 +48,11 @@ See [SP metadata configuration](src/main/resources/metadata/sp.xml) for the SP E
 
 #### SSO Circle
 
-    https://idp.ssocircle.com:443/sso/saml2/jsp/idpSSOInit.jsp?metaAlias=/ssocircle&spEntityID=<configurred SP EntityID>
+    https://idp.ssocircle.com:443/sso/saml2/jsp/idpSSOInit.jsp?metaAlias=/ssocircle&spEntityID=urn:troyhart:nwri
 
 #### TESTSHIB
 
-    https://idp.testshib.org/idp/profile/SAML2/Unsolicited/SSO?providerId=<configurred SP EntityID>
+    https://idp.testshib.org/idp/profile/SAML2/Unsolicited/SSO?providerId=urn:troyhart:nwri
 
 ## Guides
 
