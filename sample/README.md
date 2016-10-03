@@ -6,12 +6,12 @@ identity providers.
 
 ## Service Provider (SP) Metadata
 
-* [urn:troyhart:nwri](src/main/resources/metadata/sp.xml)
+* EntityID: [urn:troyhart:nwri](src/main/resources/metadata/sp.xml)
 
 ## Identity Provider (IDP) Metadata
 
-* [https://idp.ssocircle.com](src/main/resources/metadata/ssocircle-idp.xml)
-* [https://idp.testshib.org/idp/shibboleth](src/main/resources/metadata/testshib-idp.xml)
+* EntityID: [https://idp.ssocircle.com](src/main/resources/metadata/ssocircle-idp.xml)
+* EntityID: [https://idp.testshib.org/idp/shibboleth](src/main/resources/metadata/testshib-idp.xml)
 
 ## Build
 
