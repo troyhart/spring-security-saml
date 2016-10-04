@@ -47,23 +47,23 @@
     </md:KeyDescriptor>
     <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://localhost:8181/spring-security-saml2-sample/saml/SingleLogout" />
     <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://localhost:8181/spring-security-saml2-sample/saml/SingleLogout" />
-    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
-    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+<!--     <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat> -->
+<!--     <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat> -->
     <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
-    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
-    <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName</md:NameIDFormat>
+<!--     <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat> -->
+<!--     <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName</md:NameIDFormat> -->
     <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://localhost:8181/spring-security-saml2-sample/saml/SSO" index="0" isDefault="true" />
     <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://localhost:8181/spring-security-saml2-sample/saml/SSO" index="1" />
-    <md:AttributeConsumingService isDefault="true" index="2">
-      <md:ServiceName xml:lang="en">
-        Northwest Research Service Provider
-      </md:ServiceName>
-      <md:RequestedAttribute Name="companycode" FriendlyName="companycode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" isRequired="true">
-      </md:RequestedAttribute>
-      <md:RequestedAttribute Name="departmentNumber" FriendlyName="departmentNumber" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" isRequired="true">
-      </md:RequestedAttribute>
-      <md:RequestedAttribute Name="departmentname" FriendlyName="departmentname" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" isRequired="true">
-      </md:RequestedAttribute>
-    </md:AttributeConsumingService>
+<!--     <md:AttributeConsumingService isDefault="true" index="2"> -->
+<!--       <md:ServiceName xml:lang="en"> -->
+<!--         Northwest Research Service Provider -->
+<!--       </md:ServiceName> -->
+<!--       <md:RequestedAttribute Name="companycode" FriendlyName="companycode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" isRequired="true"> -->
+<!--       </md:RequestedAttribute> -->
+<!--       <md:RequestedAttribute Name="departmentNumber" FriendlyName="departmentNumber" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" isRequired="true"> -->
+<!--       </md:RequestedAttribute> -->
+<!--       <md:RequestedAttribute Name="departmentname" FriendlyName="departmentname" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" isRequired="true"> -->
+<!--       </md:RequestedAttribute> -->
+<!--     </md:AttributeConsumingService> -->
   </md:SPSSODescriptor>
 </md:EntityDescriptor>
