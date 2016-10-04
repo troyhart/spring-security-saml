@@ -23,6 +23,13 @@ identity providers.
 
 NOTE: see the tomcat plugin configuration in [pom.xml](pom.xml) where the web server port is configured.
 
+### Debugging
+
+Set the environment variable `MAVEN_OPTS` as shown below to enable remote debugging.
+
+    export MAVEN_OPTS=-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n
+
+See [How to set agentlib property for mvn tomcat plugin (jpda)](http://stackoverflow.com/questions/12422125/how-to-set-agentlib-property-for-mvn-tomcat-plugin-jpda), on stackoverflow, for more information.
 
 ## View metadata
 
@@ -49,6 +56,16 @@ See [SP metadata configuration](src/main/resources/metadata/sp.xml) for the SP E
 #### SSO Circle
 
     https://idp.ssocircle.com:443/sso/saml2/jsp/idpSSOInit.jsp?metaAlias=/ssocircle&spEntityID=urn:troyhart:nwri
+
+So this feature has stopped working. I've done some debugging and I can see that the code does pickup `http://idp.ssocircle.com` as the `EntityId`. It picks this
+up from the issuer name of the from the SAML message. Debugging, I've found the following two methods that are responsible for parsing/decoding the the message and
+coming up with the bad `EntityId`:
+
+* org.opensaml.saml2.binding.decoding.BaseSAML2MessageDecoder.extractEntityId(Issuer)
+* org.springframework.security.saml.metadata.CachingMetadataManager.getEntityDescriptor(String)
+
+I suspect that if the sample application were deployed on `https` this issue would go away, but I haven't embarked on this endeavor yet. 
+
 
 #### TESTSHIB
 
