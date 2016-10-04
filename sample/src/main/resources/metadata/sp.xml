@@ -5,7 +5,7 @@
   entityID="urn:troyhart:nwri"
 >
   <md:SPSSODescriptor
-    AuthnRequestsSigned="true"
+    AuthnRequestsSigned="false"
     WantAssertionsSigned="true"
     protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"
   >
