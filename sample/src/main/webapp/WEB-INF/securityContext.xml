@@ -161,23 +161,6 @@
         
         <bean class="org.springframework.security.saml.metadata.ExtendedMetadataDelegate">
           <constructor-arg>
-            <bean class="org.opensaml.saml2.metadata.provider.FilesystemMetadataProvider">
-              <constructor-arg>
-                <value type="java.io.File">classpath:/metadata/testshib-idp.xml</value>
-              </constructor-arg>
-              <property
-                name="parserPool"
-                ref="parserPool" />
-            </bean>
-          </constructor-arg>
-          <constructor-arg>
-            <bean class="org.springframework.security.saml.metadata.ExtendedMetadata">
-            </bean>
-          </constructor-arg>
-        </bean>
-        
-        <bean class="org.springframework.security.saml.metadata.ExtendedMetadataDelegate">
-          <constructor-arg>
             <bean class="org.opensaml.saml2.metadata.provider.ResourceBackedMetadataProvider">
               <constructor-arg>
                 <bean class="java.util.Timer" />
