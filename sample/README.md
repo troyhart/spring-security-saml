@@ -55,7 +55,7 @@ See [SP metadata configuration](src/main/resources/metadata/sp.xml) for the SP E
 
 #### SSO Circle
 
-    https://idp.ssocircle.com:443/sso/saml2/jsp/idpSSOInit.jsp?metaAlias=/ssocircle&spEntityID=urn:troyhart:nwri
+    https://idp.ssocircle.com:443/sso/saml2/jsp/idpSSOInit.jsp?metaAlias=/publicidp&spEntityID=urn:troyhart:nwri
 
 So this feature has stopped working. I've done some debugging and I can see that the code does pickup `http://idp.ssocircle.com` as the `EntityId`. It picks this
 up from the issuer name of the from the SAML message. Debugging, I've found the following two methods that are responsible for parsing/decoding the the message and
