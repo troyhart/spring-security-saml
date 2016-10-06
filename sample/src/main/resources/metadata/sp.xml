@@ -2,13 +2,11 @@
 <md:EntityDescriptor
   xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
   ID="urn_troyhart_nwri"
-  entityID="urn:troyhart:nwri"
->
+  entityID="urn:troyhart:nwri">
   <md:SPSSODescriptor
     AuthnRequestsSigned="false"
     WantAssertionsSigned="true"
-    protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"
-  >
+    protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
     <md:KeyDescriptor use="signing">
       <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
         <ds:X509Data>
@@ -65,24 +63,58 @@
       index="1" />
     <md:AttributeConsumingService
       isDefault="true"
-      index="2"
-    >
+      index="2">
       <md:ServiceName xml:lang="en">NWRI N4E SP</md:ServiceName>
       <md:RequestedAttribute
         Name="companycode"
-        FriendlyName="companycode"
         NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
-        isRequired="true" />
+        isRequired="true">
+      </md:RequestedAttribute>
+      <md:RequestedAttribute
+        Name="dispname"
+        NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
+        isRequired="true">
+      </md:RequestedAttribute>
+      <md:RequestedAttribute
+        Name="uid"
+        NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
+        isRequired="true">
+      </md:RequestedAttribute>
+      <md:RequestedAttribute
+        Name="email"
+        NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
+        isRequired="true">
+      </md:RequestedAttribute>
       <md:RequestedAttribute
         Name="departmentNumber"
-        FriendlyName="departmentNumber"
         NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
-        isRequired="true" />
+        isRequired="true">
+      </md:RequestedAttribute>
       <md:RequestedAttribute
         Name="departmentname"
-        FriendlyName="departmentname"
         NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
-        isRequired="true" />
+        isRequired="true">
+      </md:RequestedAttribute>
+      <md:RequestedAttribute
+        Name="firstName"
+        NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
+        isRequired="true">
+      </md:RequestedAttribute>
+      <md:RequestedAttribute
+        Name="middleName"
+        NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
+        isRequired="false">
+      </md:RequestedAttribute>
+      <md:RequestedAttribute
+        Name="lastName"
+        NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
+        isRequired="true">
+      </md:RequestedAttribute>
+      <md:RequestedAttribute
+        Name="title"
+        NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"
+        isRequired="false">
+      </md:RequestedAttribute>
     </md:AttributeConsumingService>
   </md:SPSSODescriptor>
 </md:EntityDescriptor>
