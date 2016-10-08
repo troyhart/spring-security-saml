@@ -100,9 +100,9 @@
         <configuration>
           <path>/${project.build.finalName}</path>
           <port>8181</port>
-<!--           <httpsPort>8443</httpsPort> -->
-<!--           <keystoreFile>${basedir}/src/main/resources/security/samlKeystore.jks</keystoreFile> -->
-<!--           <keystorePass>nalle123</keystorePass> -->
+          <httpsPort>8443</httpsPort>
+          <keystoreFile>${basedir}/src/main/resources/security/samlKeystore.jks</keystoreFile>
+          <keystorePass>nalle123</keystorePass>
         </configuration>
       </plugin>
     </plugins>
